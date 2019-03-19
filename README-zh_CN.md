@@ -3,8 +3,4 @@
 # hexo-theme-wikipile
 Compile your ideas using wiki.
 
-English | [简体中文](./README-zh_CN.md)
-
-## ✨ Features
-
-- Beautiful
+[English](./README.md) | 简体中文
