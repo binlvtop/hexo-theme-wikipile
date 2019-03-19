@@ -1,11 +1,11 @@
  const path = require('path'),
      webpack = require('webpack'),
-     ExtractTextPlugin = require('extract-text-webpack-plugin'),
+     MiniCssExtractPlugin = require("mini-css-extract-plugin"),
      CleanPlugin = require('clean-webpack-plugin');
 
  module.exports = {
      entry: {
-         main: './scripts/main.js'
+         main: './src/scripts/main.js'
      },
      output: {
          path: path.resolve(__dirname, 'source'),
@@ -13,7 +13,7 @@
      },
      module: {
          rules: [{
-                 test: require.resolve('./scripts/jquery'),
+                 test: require.resolve('./src/scripts/jquery'),
                  use: [{
                      loader: 'expose-loader',
                      options: '$'
@@ -21,36 +21,35 @@
              },
              {
                  test: /\.js$/,
+                 exclude: /node_modules/,
                  use: {
                      loader: 'babel-loader',
                      options: {
-                         presets: ['es2015']
+                         presets: ['@babel/preset-env']
                      }
                  },
-                 exclude: /node_modules/
              },
              {
                  test: /\.(styl|css)$/,
-                 use: ExtractTextPlugin.extract({
-                     fallback: 'style-loader',
-                     use: [{
-                             loader: 'css-loader',
-                             options: {
-                                 importLoaders: 2,
-                                 minimize: true
-                             }
-                         },
-                         {
-                             loader: 'postcss-loader',
-                             options: {
-                                 plugins: [require("autoprefixer")({
-                                     browsers: ['last 5 versions']
-                                 })]
-                             }
-                         },
-                         'stylus-loader'
-                     ]
-                 })
+                 use: [
+                MiniCssExtractPlugin.loader,
+                {
+                    loader: 'css-loader',
+                    options: {
+                        importLoaders: 2,
+                        minimize: true
+                    }
+                },
+                {
+                    loader: 'postcss-loader',
+                    options: {
+                        plugins: [require("autoprefixer")({
+                            browsers: ['last 5 versions']
+                        })]
+                    }
+                },
+                'stylus-loader'
+            ]
              },
              {
                  test: /\.(png|jpg|gif)$/,
@@ -74,8 +73,8 @@
          ]
      },
      plugins: [
-         new ExtractTextPlugin('wikipile.min.css'),
-         new CleanPlugin('../source', {
+         new MiniCssExtractPlugin('wikipile.min.css'),
+         new CleanPlugin('./source', {
             // 一般图标不需要清空
             exclude: ['images', 'fonts']
          }),
