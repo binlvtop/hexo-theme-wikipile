@@ -8,12 +8,12 @@
          main: './src/scripts/main.js'
      },
      output: {
-         path: path.resolve(__dirname, 'source'),
+         path: path.resolve(process.cwd(), 'source'),
          filename: 'wikipile.bundle.js'
      },
      module: {
          rules: [{
-                 test: require.resolve('./src/scripts/jquery'),
+                 test: path.resolve(process.cwd(), 'src/scripts/jquery.js'),
                  use: [{
                      loader: 'expose-loader',
                      options: '$'
@@ -76,7 +76,7 @@
          new MiniCssExtractPlugin('wikipile.min.css'),
          new CleanPlugin('./source', {
             // 一般图标不需要清空
-            exclude: ['images', 'fonts']
+            exclude: ['images', 'fonts', 'css', 'js']
          }),
          new webpack.optimize.OccurrenceOrderPlugin(),
          new webpack.optimize.UglifyJsPlugin()
