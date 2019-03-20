@@ -42,7 +42,7 @@
                 loader: 'css-loader',
                 options: {
                     importLoaders: 2,
-                    minimize: true
+                    // minimize: true
                 }
             },
             {
@@ -78,10 +78,12 @@
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin('wikipile.min.css'),
+        new MiniCssExtractPlugin({
+            filename: 'wikipile.min.css'
+        }),
         new CleanPlugin({
         // 不需要清空
-        cleanOnceBeforeBuildPatterns: ['!images/*', '!fonts/*', '!css', '!js']
+        cleanOnceBeforeBuildPatterns: ['!images/*', '!css', '!js']
         })
     ]
  }

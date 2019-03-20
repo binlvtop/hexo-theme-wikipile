@@ -1,3 +1,4 @@
+import Stlye from '../css/style.styl'
 import Index from './index.js'
 import Anm from './animate.js'
 import Mobile from './mobile.js'

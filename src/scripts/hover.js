@@ -1,4 +1,4 @@
-// import Style from '../css/_import/hover.styl'
+import Style from '../css/_import/hover.styl'
 
 exports.init = () => {
     let $socials = $('.social a'),
