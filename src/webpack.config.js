@@ -4,81 +4,84 @@
      CleanPlugin = require('clean-webpack-plugin');
 
  module.exports = {
-     entry: {
-         main: './src/scripts/main.js'
-     },
-     output: {
-         path: path.resolve(process.cwd(), 'source'),
-         filename: 'wikipile.bundle.js'
-     },
-     module: {
-         rules: [{
-                 test: path.resolve(process.cwd(), 'src/scripts/jquery.js'),
-                 use: [{
-                     loader: 'expose-loader',
-                     options: '$'
-                 }]
-             },
-             {
-                 test: /\.js$/,
-                 exclude: /node_modules/,
-                 use: {
-                     loader: 'babel-loader',
-                     options: {
-                         presets: ['@babel/preset-env']
-                     }
-                 },
-             },
-             {
-                 test: /\.(styl|css)$/,
-                 use: [
-                MiniCssExtractPlugin.loader,
-                {
-                    loader: 'css-loader',
+    mode: 'production',
+    entry: {
+        main: './src/scripts/main.js'
+    },
+    output: {
+        /**
+         * With zero configuration,
+         *   clean-webpack-plugin will remove files inside the directory below
+         */
+        path: path.resolve(process.cwd(), 'source'),
+        filename: 'wikipile.bundle.js'
+    },
+    module: {
+        rules: [{
+                test: path.resolve(process.cwd(), 'src/scripts/jquery.js'),
+                use: [{
+                    loader: 'expose-loader',
+                    options: '$'
+                }]
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
                     options: {
-                        importLoaders: 2,
-                        minimize: true
+                        presets: ['@babel/preset-env']
                     }
                 },
-                {
-                    loader: 'postcss-loader',
+            },
+            {
+                test: /\.(styl|css)$/,
+                use: [
+            MiniCssExtractPlugin.loader,
+            {
+                loader: 'css-loader',
+                options: {
+                    importLoaders: 2,
+                    minimize: true
+                }
+            },
+            {
+                loader: 'postcss-loader',
+                options: {
+                    plugins: [require("autoprefixer")({
+                        browsers: ['last 5 versions']
+                    })]
+                }
+            },
+            'stylus-loader'
+        ]
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use: [{
+                    loader: 'url-loader',
                     options: {
-                        plugins: [require("autoprefixer")({
-                            browsers: ['last 5 versions']
-                        })]
+                        name: 'img/[name].[hash:4].[ext]',
+                        limit: 1024
                     }
-                },
-                'stylus-loader'
-            ]
-             },
-             {
-                 test: /\.(png|jpg|gif)$/,
-                 use: [{
-                     loader: 'url-loader',
-                     options: {
-                         name: 'img/[name].[hash:4].[ext]',
-                         limit: 1024
-                     }
-                 }]
-             },
-             {
-                 test: /\.(woff|svg|eot|ttf)\??.*$/,
-                 use: {
-                     loader: 'file-loader',
-                     options: {
-                         name: 'fonts/[name].[hash:4].[ext]'
-                     }
-                 }
-             }
-         ]
-     },
-     plugins: [
-         new MiniCssExtractPlugin('wikipile.min.css'),
-         new CleanPlugin('./source', {
-            // 一般图标不需要清空
-            exclude: ['images', 'fonts', 'css', 'js']
-         }),
-         new webpack.optimize.OccurrenceOrderPlugin(),
-         new webpack.optimize.UglifyJsPlugin()
-     ]
+                }]
+            },
+            {
+                test: /\.(woff|svg|eot|ttf)\??.*$/,
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: 'fonts/[name].[hash:4].[ext]'
+                    }
+                }
+            }
+        ]
+    },
+    plugins: [
+        new MiniCssExtractPlugin('wikipile.min.css'),
+        new CleanPlugin({
+        // 不需要清空
+        cleanOnceBeforeBuildPatterns: ['!images/*', '!fonts/*', '!css', '!js']
+        })
+    ]
  }

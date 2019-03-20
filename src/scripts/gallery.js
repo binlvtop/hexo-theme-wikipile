@@ -1,4 +1,4 @@
-import Style from '../css/_import/gallery.styl'
+// import Style from '../css/_import/gallery.styl'
 
 import Utils from './utils'
 
