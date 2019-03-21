@@ -23,7 +23,7 @@ profile:
 # site favicon
 # 图片放置于主题目录下: source/imgaes/
 # 站点图标
-favicon: /images/favicon.png
+favicon: /images/favicon.ico
 
 # social link
 # 更多链接
