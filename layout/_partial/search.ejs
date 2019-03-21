@@ -1,0 +1,20 @@
+<div class="container">
+  <div class=row>
+    <div class=col-xs-12>
+      <h1><%= config.title %></h1>
+      <lebal class="glyphicon glyphicon-screenshot homepage-logo"></lebal>
+      <p>
+        <%= config.subtitle %><br>
+        <span class="package-amount">
+          <%- __('home_package_amount').replace('{num}', site.posts.length) %>
+        </span>
+      </p>
+      <div class="search-wraper" role="search">
+        <div class="form-group">
+          <input class="form-control search clearable" type="text" id="local-search-input" name="q" results="0" placeholder="<%= __('home_search_placeholder') %>" autocomplete=off autofocus tabindex=0 autocorrect=off autocapitalize=off spellcheck=false>
+          <i class="fa fa-search"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

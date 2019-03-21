@@ -1,0 +1,18 @@
+<nav id="nav" class="navbar">
+  <div class="top">
+    <div class="navbar-header">
+      <a href="/" class="logo">
+        <div class="logo-img">#</div>
+      </a>
+    </div>
+    <div class="menu-items">
+      <% for (var i in theme.social) { %>
+        <div class="menu-item">
+          <a target="_blank" class="social-links" href="<%- (theme.social[i]) %>" >		
+            <%= i %>
+          </a>	
+        </div>     	
+      <% } %>
+    </div>
+  </div>
+</nav>

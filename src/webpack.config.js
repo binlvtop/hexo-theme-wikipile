@@ -45,14 +45,14 @@
                     // minimize: true
                 }
             },
-            {
-                loader: 'postcss-loader',
-                options: {
-                    plugins: [require("autoprefixer")({
-                        browsers: ['last 5 versions']
-                    })]
-                }
-            },
+            // {
+            //     loader: 'postcss-loader',
+            //     options: {
+            //         plugins: [require("autoprefixer")({
+            //             browsers: ['last 5 versions']
+            //         })]
+            //     }
+            // },
             'stylus-loader'
         ]
             },
