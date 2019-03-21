@@ -1090,7 +1090,7 @@ html {
 }
 body {
   overflow-x: hidden;
-  font: 400 1em/1.8 -apple-system, BlinkMacSystemFont, Arial, sans-serif, Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica;
+  font: 400 1em/1.8 -apple-system, BlinkMacSystemFont, 'MavenPro', Arial, sans-serif, Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica;
   font-size: 14px;
 }
 @media screen and (max-width: 479px) {
@@ -1190,10 +1190,6 @@ time {
     right: 28px;
   }
 }
-.container {
-  margin-top: 2.5rem;
-  min-height: 80vh;
-}
 .container-inner {
   margin: 0 auto;
   width: 50%;
@@ -1228,21 +1224,53 @@ time {
   background: #ebebeb;
 }
 .navbar {
+  width: 100%;
   background: #100e16;
   position: fixed;
 }
-top 0 {
-  right: 0;
-  left: 0;
+.navbar .solid .top {
+  padding: 4px 20px;
 }
-top 0 z-index 9 .top {
+.navbar .top {
   display: flex;
-  justify-content: center;
-  padding: 16px 20px;
+  justify-content: space-between;
+  padding: 10px 20px;
   max-width: 1280px;
   margin: 0px auto 0 auto;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
   transition: all 0.2s ease;
+}
+.navbar .top .logo {
+  flex: 0;
+  color: #fff;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+}
+.navbar .top .logo .logo-img {
+  color: #000;
+  background: #fff;
+  padding: 4px 8px;
+  position: relative;
+  background-size: contain;
+  text-indent: -999em;
+  width: 28px;
+  height: 28px;
+}
+.navbar .top .menu-items {
+  display: flex;
+  position: static;
+  background: none;
+  color: #fff;
+  width: auto;
+  padding: 5px 0;
+}
+.navbar .top .menu-items .menu-item {
+  margin-left: 20px;
+}
+.navbar .top .menu-items .menu-item a {
+  color: inherit;
+  font-size: 20px;
 }
 .header {
   width: 100%;
@@ -1397,7 +1425,7 @@ top 0 z-index 9 .top {
 .vmail,
 .vempty,
 .vsubmit {
-  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif, Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica;
+  font-family: -apple-system, BlinkMacSystemFont, 'MavenPro', Arial, sans-serif, Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica;
   font-size: 1rem;
   border: none !important;
 }

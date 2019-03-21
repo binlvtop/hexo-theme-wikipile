@@ -1,12 +1,12 @@
 <nav id="nav" class="navbar">
   <div class="top">
-    <div class="navbar-header">
+    <div>
       <a href="/" class="logo">
         <div class="logo-img">#</div>
       </a>
     </div>
     <div class="menu-items">
-      <% for (var i in theme.social) { %>
+      <% for (var i in theme.menu) { %>
         <div class="menu-item">
           <a target="_blank" class="social-links" href="<%- (theme.social[i]) %>" >		
             <%= i %>
