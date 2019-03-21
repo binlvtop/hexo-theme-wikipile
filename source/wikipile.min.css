@@ -866,6 +866,10 @@ p code {
   border: 0.5px solid #fff;
 }
 @font-face {
+  font-family: 'MavenPro';
+  src: url(fonts/MavenPro.b39b.woff) format('woff'), url(fonts/MavenPro.be9b.ttf) format('truetype');
+}
+@font-face {
   font-family: 'iconfont';
   src: url(fonts/iconfont.6239.eot);
   src: url(fonts/iconfont.6239.eot?#iefix) format('embedded-opentype'), url(fonts/iconfont.e69a.woff) format('woff'), url(fonts/iconfont.7c23.ttf) format('truetype'), url(fonts/iconfont.32d1.svg#iconfont) format('svg');
@@ -1090,7 +1094,7 @@ html {
 }
 body {
   overflow-x: hidden;
-  font: 400 1em/1.8 -apple-system, BlinkMacSystemFont, 'MavenPro', Arial, sans-serif, Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica;
+  font: 400 1em/1.8 -apple-system, 'MavenPro', BlinkMacSystemFont, Arial, sans-serif, Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica;
   font-size: 14px;
 }
 @media screen and (max-width: 479px) {
@@ -1425,7 +1429,7 @@ time {
 .vmail,
 .vempty,
 .vsubmit {
-  font-family: -apple-system, BlinkMacSystemFont, 'MavenPro', Arial, sans-serif, Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica;
+  font-family: -apple-system, 'MavenPro', BlinkMacSystemFont, Arial, sans-serif, Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica;
   font-size: 1rem;
   border: none !important;
 }
