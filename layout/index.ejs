@@ -1,7 +1,9 @@
 <header class="site-header">
   <%- partial('_partial/nav') %>
 </header>
-<%- partial('_partial/search') %>
+<div class="site-content">
+  <%- partial('_partial/search') %>
+</div>
 <%
 var posts = site.posts.sort('date', -1).limit(30);
 %>

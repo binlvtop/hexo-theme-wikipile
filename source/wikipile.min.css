@@ -1231,6 +1231,10 @@ time {
   width: 100%;
   background: #100e16;
   position: fixed;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 9;
 }
 .navbar .solid .top {
   padding: 4px 20px;
@@ -1657,6 +1661,10 @@ time {
   font-size: 0.8rem;
   margin-top: 0.5rem;
 }
+.site-header,
+.site-content {
+  margin-top: 56px;
+}
 .profile {
   border-bottom: 0.5px solid #f5f5f5;
   margin-bottom: 28px;
@@ -2042,17 +2050,21 @@ ul>li {
 .item-title:hover {
   color: #e26d6d;
 }
+.index-feature-block {
+  background: #100e16;
+}
+.index-feature-block .intro-block {
+  color: #fff;
+}
+.intro-block,
+.search-block {
+  text-align: center;
+  padding: 20px 0;
+  margin: 0 auto 0 auto;
+  max-width: 1280px;
+}
 .search-container {
-  display: none;
-  position: fixed;
-  left: 50%;
-  top: 80px;
-  z-index: 999;
   width: 740px;
-  max-height: 620px;
-  margin-left: -370px;
-  overflow-x: hidden;
-  overflow-y: auto;
   box-sizing: content-box;
   background-color: #fff;
   border: 1px solid #f1f1f1;
