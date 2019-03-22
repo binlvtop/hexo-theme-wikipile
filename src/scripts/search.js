@@ -4,13 +4,16 @@
 
 import Utils from './utils'
 
-exports.init = () => {
-    //
-    //  触发搜索的DOM
-    //
-    $('.search-widget,.mobile-menu-search,#header-menu-search,.search-cancel').click(() => {
-        opContainer();
-    });
+export default {
+    init: () => {
+        //
+        //  触发搜索的DOM
+        //
+        search('/search.xml', 'search-input', 'search-result');
+        $('.search-widget,.mobile-menu-search,#header-menu-search,.search-cancel').click(() => {
+            opContainer();
+        });
+    }
 }
 
 function opContainer() {
@@ -62,6 +65,7 @@ function search(path, search_id, content_id) {
                 var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
                 $resultContent.innerHTML = '';
                 if (this.value.trim().length <= 0) {
+                    $('#search-result').hide()
                     return;
                 }
                 // perform local searching
@@ -98,6 +102,7 @@ function search(path, search_id, content_id) {
                     }
                     // show search results
                     if (isMatch) {
+                        $('#search-result').show()
                         str += '<div class=\'search-item\'>';
                         str += '<a href=\'' + data_url + '\' class=\'search-title\'>' + data_title + '</a>';
                         var content = data.content.trim().replace(/<[^>]+>/g, '');

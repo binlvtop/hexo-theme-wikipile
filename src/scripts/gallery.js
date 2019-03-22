@@ -2,10 +2,12 @@ import Style from '../css/_import/gallery.styl'
 
 import Utils from './utils'
 
-exports.init = () => {
-    // 开启Gallery的格式
-    let galleryElements = $('.banner,.gallery,img');
-    new Gallery(galleryElements);
+export default {
+    init: () => {
+        // 开启Gallery的格式
+        let galleryElements = $('.banner,.gallery,img');
+        new Gallery(galleryElements);
+    }
 }
 
 

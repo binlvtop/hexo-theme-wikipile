@@ -13,27 +13,28 @@
 	& .search-input	
 		max-width 480px
 		width 90%
-	& .search-result
-		padding 16px 12px
-		margin 3px 0	
-		height auto
-		overflow hidden
-	& .search-item
-		margin 16px 4px 14px 4px	
-		border-bottom 1px solid $line-clr 
-		& .search-title
-			@extend $oneline
-			display block
-			font-size 1rem
-			padding-left 12px	
-		& .search-content	
-			@extend $oneline
-			padding 8px 12px 16px 12px
-			font-size .825rem
-			color rgba(0,0,0,.7)			
-		& .search-keyword
-			font-size 0.9rem
-			color $thr-clr	
+.search-result
+	display none
+	padding 16px 12px
+	margin 3px 0	
+	height auto
+	overflow hidden
+.search-item
+	margin 16px 4px 14px 4px	
+	border-bottom 1px solid $line-clr 
+	.search-title
+		@extend $oneline
+		display block
+		font-size 1rem
+		padding-left 12px	
+	.search-content	
+		@extend $oneline
+		padding 8px 12px 16px 12px
+		font-size .825rem
+		color black			
+	.search-keyword
+		font-size 0.9rem
+		color $thr-clr	
 
 & .search-empty
 	margin 30px 0

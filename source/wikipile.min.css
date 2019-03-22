@@ -1,7 +1,7 @@
 .header-menu-link,
 .post-nav-title,
-.search-container .search-item .search-title,
-.search-container .search-item .search-content {
+.search-item .search-title,
+.search-item .search-content {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -2087,27 +2087,28 @@ ul>li {
   max-width: 480px;
   width: 90%;
 }
-.search-container .search-result {
+.search-result {
+  display: none;
   padding: 16px 12px;
   margin: 3px 0;
   height: auto;
   overflow: hidden;
 }
-.search-container .search-item {
+.search-item {
   margin: 16px 4px 14px 4px;
   border-bottom: 1px solid #f1f1f1;
 }
-.search-container .search-item .search-title {
+.search-item .search-title {
   display: block;
   font-size: 1rem;
   padding-left: 12px;
 }
-.search-container .search-item .search-content {
+.search-item .search-content {
   padding: 8px 12px 16px 12px;
   font-size: 0.825rem;
-  color: rgba(0,0,0,0.7);
+  color: #000;
 }
-.search-container .search-item .search-keyword {
+.search-item .search-keyword {
   font-size: 0.9rem;
   color: #e26d6d;
 }

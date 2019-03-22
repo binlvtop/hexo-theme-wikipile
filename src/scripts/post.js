@@ -6,10 +6,12 @@ import Utils from './utils.js'
 import Toc from './toc.js'
 
 
-exports.init = () => {
+export default {
+    init: () => {
 
-    initPost();
-    Toc.init();
+        initPost();
+        Toc.init();
+    }
 }
 
 function initPost() {

@@ -5,7 +5,7 @@
 
 import Utils from './utils'
 
-module.exports = {
+export default {
 
     init: function () {
         initActiveMenu();
@@ -127,6 +127,4 @@ function fixedHeader() {
         .removeClass('slideDown');
 }
 
-// just say hi....
-console.log('Hexo Theme Nayo, By Lemonreds.');
-console.log('@see [https://github.com/Lemonreds/hexo-theme-nayo]');
+console.log(``);

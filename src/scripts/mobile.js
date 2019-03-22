@@ -4,23 +4,25 @@
 
 import Utils from './utils.js'
 
-exports.init = () => {
+export default {
+    init: () => {
 
-    if (!Utils.isPc) {
-        const $toggle = $('.mobile-toggle'),
-            $menuSearch = $('.mobile-menu-search');
-        let $mask;
-
-
-        $toggle.click(() => {
-            $mask = Utils.createMask();
-            showMenu();
-            for (let e of [$mask, $menuSearch]) {
-                e.click(() => {
-                    hideMenu();
-                })
-            }
-        })
+        if (!Utils.isPc) {
+            const $toggle = $('.mobile-toggle'),
+                $menuSearch = $('.mobile-menu-search');
+            let $mask;
+    
+    
+            $toggle.click(() => {
+                $mask = Utils.createMask();
+                showMenu();
+                for (let e of [$mask, $menuSearch]) {
+                    e.click(() => {
+                        hideMenu();
+                    })
+                }
+            })
+        }
     }
 }
 //
