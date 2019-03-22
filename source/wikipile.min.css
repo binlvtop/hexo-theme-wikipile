@@ -1227,6 +1227,14 @@ time {
 ::selection {
   background: #ebebeb;
 }
+.entry,
+textarea {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  font-size: inherit;
+  outline: none;
+  height: 44px;
+}
 .navbar {
   width: 100%;
   background: #100e16;
@@ -2063,37 +2071,9 @@ ul>li {
   margin: 0 auto 0 auto;
   max-width: 1280px;
 }
-.search-container {
-  width: 740px;
-  box-sizing: content-box;
-  background-color: #fff;
-  border: 1px solid #f1f1f1;
-  border-radius: 4px;
-  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.05);
-}
-.search-container .search-header {
-  margin: 0 16px;
-  height: 60px;
-  line-height: 60px;
-  position: relative;
-}
-.search-container .search-header .search-input {
-  caret-color: #000;
-  padding: 6px 12px;
-  width: 95%;
-  height: 42px;
-  border: none;
-  font-size: 0.85rem;
-  color: rgba(0,0,0,0.75);
-  background-color: #fff;
-  border-bottom: 1px solid #f1f1f1;
-  outline: none;
-}
-.search-container .search-header .search-cancel {
-  height: 42px;
-}
-.search-container .search-header .search-cancel>i {
-  font-size: 22px;
+.search-container .search-input {
+  max-width: 480px;
+  width: 90%;
 }
 .search-container .search-result {
   padding: 16px 12px;
