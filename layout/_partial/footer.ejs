@@ -1,12 +1,12 @@
-<footer>
-	<p>
-		<% if (config.author){ %>
-		<%= new Date().getFullYear() %>&nbsp;&copy;&nbsp;<%= config.author %>
-		<% } else { %>
-		<%= new Date().getFullYear() %>&nbsp;&copy;&nbsp;<%= config.title %>
-		<% } %>. Theme by <a href="https://github.com/baylin87" title="WikiPile" target="_blank">WikiPile</a>
-	</p>
+<footer class="footer">
+	<div class="footer-inner">
+		<p>
+			<% if (config.author){ %>
+			<%= new Date().getFullYear() %>&nbsp;&copy;&nbsp;<%= config.author %>
+			<% } else { %>
+			<%= new Date().getFullYear() %>&nbsp;&copy;&nbsp;<%= config.title %>
+			<% } %>. Theme by <a href="https://github.com/baylin87" title="WikiPile" target="_blank">WikiPile</a>
+		</p>
+	</div>
 	<p><%- partial('google_analytics') %></p>
-
 </footer>
-<script src="<%- config.root %>css/bootstrap-3.3.7/js/bootstrap.min.js"></script>

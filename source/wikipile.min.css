@@ -1091,11 +1091,13 @@ html {
   line-height: 1.15;
   background: #fff;
   -webkit-text-size-adjust: none;
+  height: 100%;
 }
 body {
   overflow-x: hidden;
   font: 400 1em/1.8 -apple-system, 'MavenPro', BlinkMacSystemFont, Arial, sans-serif, Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica;
   font-size: 14px;
+  min-height: 100%;
 }
 @media screen and (max-width: 479px) {
   html {
@@ -1669,7 +1671,6 @@ textarea {
   font-size: 0.8rem;
   margin-top: 0.5rem;
 }
-.site-header,
 .site-content {
   margin-top: 56px;
 }
@@ -2139,19 +2140,24 @@ ul>li {
   font-size: 16px;
   color: #e26d6d;
 }
-#footer {
-  margin-top: 10vh;
-  padding: 50px 0 0;
-  text-align: center;
-  font-family: 'Arial';
+.footer {
+  font-size: 14px;
+  padding: 40px 0;
+  background: #100e16;
 }
-#footer .footer-copyright {
+.footer .footer-inner {
+  text-align: center;
+  max-width: 1280px;
+  margin: 0 auto;
+  color: #777;
+}
+.footer .footer-copyright {
   color: rgba(0,0,0,0.35);
   line-height: 22px;
   font-size: 12px;
   margin-bottom: 26px;
 }
-#footer .footer-copyright a {
+.footer .footer-copyright a {
   color: #e26d6d !important;
 }
 @media screen and (max-width: 479px) {
