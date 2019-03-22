@@ -1,5 +1,5 @@
 <header class="site-header">
-  <%- partial('_partial/nav') %>
+  <%- partial('_partial/header') %>
 </header>
 <main class="site-content">
   <%- partial('_partial/search') %>
@@ -29,9 +29,8 @@
       </div>
     </div>
   </div>
-  <a id="page-backTop">
-    <span>
-      <i class="iconfont icon-backtotop"></i>
-    </span>
-  </a> 
+  <%- partial('_partial/back_top') %>  
 </main>
+<footer>
+  <%- partial('_partial/footer') %>  
+</footer>
