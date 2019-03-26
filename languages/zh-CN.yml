@@ -31,3 +31,6 @@ Untitled: 无标题
 Search:
   Sidebar_words: 搜索
   input_words: 输入你想搜索的
+
+home_panel_title: 最新添加
+home_package_amount: 共收录了 <strong>{num}</strong>条内容

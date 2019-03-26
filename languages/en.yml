@@ -33,3 +33,6 @@ Untitled: Untitled
 Search:
   Sidebar_words: Search
   input_words: Typing Something here.
+
+home_panel_title: NEWEST!
+home_package_amount: A total of <strong>{num}</strong> content

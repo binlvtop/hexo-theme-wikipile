@@ -32,3 +32,6 @@ Search:
   Sidebar_words: 搜索
   input_words: 输入你想搜索的
 
+home_panel_title: 最進新增
+home_package_amount: 共收錄了 <strong>{num}</strong>條內容
+
