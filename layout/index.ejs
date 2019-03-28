@@ -3,6 +3,7 @@
 </header>
 <main class="site-content">
   <%- partial('_partial/search') %>
+  <%- partial('_partial/section') %>
   <%
   var posts = site.posts.sort('date', -1).limit(30);
   %>

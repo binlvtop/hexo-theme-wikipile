@@ -1732,6 +1732,37 @@ textarea {
 .profile >.social i {
   font-size: 1.3rem;
 }
+.pane {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+}
+.pane::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  margin-top: 40px;
+  border-bottom: 1px solid #c4bab9;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scale(0.5, 0.5);
+  -ms-transform: scale(0.5, 0.5);
+  -o-transform: scale(0.5, 0.5);
+  transform: scale(0.5, 0.5);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.pane .pane-title {
+  position: relative;
+  margin: 16px 0 16px 0;
+  font-size: 20px;
+  color: #100e16;
+  height: 40px;
+}
 .article {
   opacity: 0;
   margin-bottom: 48px;
