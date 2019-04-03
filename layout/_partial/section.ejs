@@ -3,9 +3,21 @@
   <span class="fw-m-bold"><%= __('home_panel_title') %></span>
   <span></span>
   </div>
+  <%
+  var posts = site.posts.sort('date', -1).limit(3);
+  %>
   <div class="pane-body">
     <div class="pane-item">
-      
+      <ul class="post">
+        <% posts.each(function(it){ %>
+            <% if(it.title != ""){ %>
+            <li class="post-list-item">
+              <time datetime="it.date"><%= it.date.format(config.date_format) %></time>
+              <a href="<%= config.root %><%= it.path %>" title="<%= it.title %>"><%= it.title %></a>
+            </li>
+            <% } %>
+        <% }); %>
+      </ul>
     </div>
   </div>
   <div class="button-wrapper"></div>
