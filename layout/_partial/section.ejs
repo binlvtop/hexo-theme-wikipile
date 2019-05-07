@@ -4,7 +4,7 @@
   <span></span>
   </div>
   <%
-  var posts = site.posts.sort('date', -1).limit(3);
+  var posts = site.posts.sort('date', -1).limit(8);
   %>
   <div class="pane-body">
     <div class="pane-item">
@@ -12,8 +12,10 @@
         <% posts.each(function(it){ %>
             <% if(it.title != ""){ %>
             <li class="post-list-item">
-              <time datetime="it.date"><%= it.date.format(config.date_format) %></time>
-              <a href="<%= config.root %><%= it.path %>" title="<%= it.title %>"><%= it.title %></a>
+              <a href="<%= config.root %><%= it.path %>" title="<%= it.title %>">
+                <time datetime="it.date"><%= it.date.format(config.date_format) %></time>
+                <%= it.title %>
+              </a>
             </li>
             <% } %>
         <% }); %>
