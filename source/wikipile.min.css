@@ -2362,22 +2362,6 @@ ul>li {
     font-size: 0.95rem;
     margin: 0 0.5rem 0 0;
   }
-  .search-container {
-    position: fixed;
-    margin: 0 auto;
-    left: 0;
-    top: 0;
-    width: 100%;
-    min-height: 100%;
-  }
-  .search-input {
-    width: 80%;
-  }
-  .search-cancel {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-  }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
   .container {
