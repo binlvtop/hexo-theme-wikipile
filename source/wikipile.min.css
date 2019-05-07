@@ -872,7 +872,7 @@ p code {
 @font-face {
   font-family: 'iconfont';
   src: url(fonts/iconfont.6239.eot);
-  src: url(fonts/iconfont.6239.eot?#iefix) format('embedded-opentype'), url(fonts/iconfont.e69a.woff) format('woff'), url(fonts/iconfont.7c23.ttf) format('truetype'), url(fonts/iconfont.8e9d.svg#iconfont) format('svg');
+  src: url(fonts/iconfont.6239.eot?#iefix) format('embedded-opentype'), url(fonts/iconfont.e69a.woff) format('woff'), url(fonts/iconfont.7c23.ttf) format('truetype'), url(fonts/iconfont.32d1.svg#iconfont) format('svg');
 }
 .iconfont {
   font-family: "iconfont" !important;
