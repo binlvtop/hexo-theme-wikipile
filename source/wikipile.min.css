@@ -1273,11 +1273,9 @@ textarea {
   transition: all 0.2s ease;
 }
 .navbar .top .logo {
-  flex: 0;
-  color: #fff;
+  display: flex;
   justify-content: flex-start;
   align-items: center;
-  display: flex;
 }
 .navbar .top .logo .logo-img {
   color: #000;
@@ -1285,7 +1283,6 @@ textarea {
   padding: 4px 8px;
   position: relative;
   background-size: contain;
-  text-indent: -999em;
   width: 28px;
   height: 28px;
 }
@@ -1505,6 +1502,7 @@ textarea {
 .post-content {
   min-height: 18vh;
   margin: 1rem 0 2rem;
+  padding: 20px;
 }
 .donate-btn,
 .share-btn {
@@ -2126,7 +2124,6 @@ ul>li {
 }
 .search-result {
   display: none;
-  padding: 16px 12px;
   margin: 3px 0;
   height: auto;
   overflow: hidden;
